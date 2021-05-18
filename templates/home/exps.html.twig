@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Hello HomeController!
+
+
+{% endblock %}
+
+{% block body %}
+    <style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+    <div class="example-wrapper">
+        <h1>
+            Mes expériences
+
+        </h1>
+        <h2>
+            Expériences pro
+
+        </h2>
+        <ul>
+            {% for item in experiences %}
+                <li>{{ item.content }}</li>
+            {% endfor %}
+        </ul>
+        <h2>
+            Scolarité
+        </h2>
+        <ul>
+            {% for item in educations %}
+                <li>{{ item.content }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}
